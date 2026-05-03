@@ -1,0 +1,727 @@
+
+<h2 class="sr-only">Documento maestro de Lana Sube Lana Baja — hub central de marca, productos, contenido y estrategia</h2>
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: var(--font-sans); }
+
+.header {
+  padding: 2rem 0 1.5rem;
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+  margin-bottom: 1.5rem;
+}
+.brand-tag {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.brand-title {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: 0.25rem;
+}
+.brand-sub {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 1.5rem;
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+  flex-wrap: wrap;
+}
+.tab {
+  font-size: 13px;
+  padding: 8px 14px;
+  border: none;
+  background: none;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -0.5px;
+  font-family: var(--font-sans);
+  transition: color 0.15s;
+}
+.tab:hover { color: var(--color-text-primary); }
+.tab.active {
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.section { display: none; }
+.section.active { display: block; }
+
+.card {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.card-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+}
+.card-content {
+  font-size: 14px;
+  color: var(--color-text-primary);
+  line-height: 1.7;
+}
+
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+
+.metric {
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 1rem;
+  text-align: center;
+}
+.metric-label {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.metric-value {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+.metric-sub {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  margin-top: 0.2rem;
+}
+
+.tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin: 2px;
+  font-weight: 500;
+}
+.tag-pink { background: #FBEAF0; color: #993556; }
+.tag-teal { background: #E1F5EE; color: #0F6E56; }
+.tag-amber { background: #FAEEDA; color: #854F0B; }
+.tag-gray { background: #F1EFE8; color: #5F5E5A; }
+.tag-blue { background: #E6F1FB; color: #185FA5; }
+
+.product-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+}
+.product-row:last-child { border-bottom: none; }
+.product-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+.dot-pink { background: #D4537E; }
+.dot-teal { background: #1D9E75; }
+.dot-amber { background: #BA7517; }
+.product-name { font-size: 14px; font-weight: 500; color: var(--color-text-primary); }
+.product-detail { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+
+.timeline-item {
+  display: flex;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+}
+.timeline-item:last-child { border-bottom: none; }
+.timeline-date {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  min-width: 80px;
+  padding-top: 2px;
+}
+.timeline-content { font-size: 14px; color: var(--color-text-primary); line-height: 1.5; }
+.timeline-note { font-size: 12px; color: var(--color-text-tertiary); margin-top: 3px; }
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.status-done { background: #EAF3DE; color: #3B6D11; }
+.status-pending { background: #FAEEDA; color: #854F0B; }
+.status-soon { background: #E6F1FB; color: #185FA5; }
+
+.hashtag-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 0.5rem;
+}
+.hashtag {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  background: var(--color-background-secondary);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 0.5px solid var(--color-border-tertiary);
+}
+.hashtag-fixed {
+  background: #FBEAF0;
+  color: #993556;
+  border-color: #F4C0D1;
+}
+
+.caption-box {
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 1rem;
+  font-size: 13px;
+  color: var(--color-text-primary);
+  line-height: 1.8;
+  white-space: pre-line;
+  margin-top: 0.5rem;
+}
+
+.ask-btn {
+  font-size: 13px;
+  padding: 8px 16px;
+  border-radius: var(--border-radius-md);
+  border: 0.5px solid var(--color-border-secondary);
+  background: none;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  margin-top: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.ask-btn:hover { background: var(--color-background-secondary); }
+
+.divider {
+  height: 0.5px;
+  background: var(--color-border-tertiary);
+  margin: 1rem 0;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+  font-size: 14px;
+}
+.info-row:last-child { border-bottom: none; }
+.info-label { color: var(--color-text-secondary); }
+.info-value { color: var(--color-text-primary); font-weight: 500; }
+</style>
+
+<div class="header">
+  <p class="brand-tag">documento maestro</p>
+  <p class="brand-title">Lana Sube · Lana Baja</p>
+  <p class="brand-sub">slow premium dog accessories — for dog lovers only</p>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab('marca')">Marca</button>
+  <button class="tab" onclick="showTab('productos')">Productos</button>
+  <button class="tab" onclick="showTab('contenido')">Contenido</button>
+  <button class="tab" onclick="showTab('captions')">Captions</button>
+  <button class="tab" onclick="showTab('hashtags')">Hashtags</button>
+  <button class="tab" onclick="showTab('web')">Web & Shop</button>
+  <button class="tab" onclick="showTab('admin')">Admin</button>
+</div>
+
+<div id="marca" class="section active">
+  <div class="grid-2">
+    <div class="card">
+      <p class="card-title">Identidad</p>
+      <div class="info-row"><span class="info-label">Nombre</span><span class="info-value">Lana Sube · Lana Baja</span></div>
+      <div class="info-row"><span class="info-label">Handle IG</span><span class="info-value">@lanasubelanabaja.co</span></div>
+      <div class="info-row"><span class="info-label">Fundadora</span><span class="info-value">Daniela Perea</span></div>
+      <div class="info-row"><span class="info-label">Mascota</span><span class="info-value">Lana, maltipoo ~6kg, talla S</span></div>
+      <div class="info-row"><span class="info-label">Ciudad</span><span class="info-value">Colombia</span></div>
+    </div>
+    <div class="card">
+      <p class="card-title">Posicionamiento</p>
+      <div class="card-content">
+        <p style="margin-bottom:8px"><strong>Categoría:</strong> Slow premium dog accessories</p>
+        <p style="margin-bottom:8px"><strong>Concepto:</strong> Statement pieces con diseño y funcionalidad para perros y sus dueñas</p>
+        <p><strong>Audiencia:</strong> Dog moms millennials con gusto, Colombia y Latam</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Voz de marca</p>
+    <div class="card-content">
+      <p style="margin-bottom:6px">Divertida con personalidad · Cercana pero premium · Spanglish · Slow y con intención</p>
+      <p style="color: var(--color-text-secondary); font-size:13px; font-style:italic; margin-top:8px">"slow making things i actually want to own"</p>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <p class="card-title">Bio perfil personal</p>
+      <div class="caption-box">daniela & lana 🐾
+marketing · data · CSM & Imperial, London
+slow making things i actually want to own
+founder @lanasubelanabaja.co</div>
+    </div>
+    <div class="card">
+      <p class="card-title">Paleta de marca</p>
+      <div class="card-content" style="display:flex; flex-direction:column; gap:8px; margin-top:4px">
+        <div style="display:flex; align-items:center; gap:10px"><div style="width:24px;height:24px;border-radius:50%;background:#F4C0D1;border:0.5px solid #ED93B1"></div><span style="font-size:13px">Rosa rayado — bandana & camiseta</span></div>
+        <div style="display:flex; align-items:center; gap:10px"><div style="width:24px;height:24px;border-radius:50%;background:#F5F0E8;border:0.5px solid #D3D1C7"></div><span style="font-size:13px">Crema/beige — bandana & camiseta</span></div>
+        <div style="display:flex; align-items:center; gap:10px"><div style="width:24px;height:24px;border-radius:50%;background:#5DCAA5;border:0.5px solid #1D9E75"></div><span style="font-size:13px">Turquesa — bandana got it from my mama</span></div>
+        <div style="display:flex; align-items:center; gap:10px"><div style="width:24px;height:24px;border-radius:50%;background:#E8453C;border:0.5px solid #c03530"></div><span style="font-size:13px">Rojo — estampado love at first woof</span></div>
+        <div style="display:flex; align-items:center; gap:10px"><div style="width:24px;height:24px;border-radius:50%;background:#3D3B8E;border:0.5px solid #26215C"></div><span style="font-size:13px">Azul marino — estampado like mother</span></div>
+      </div>
+    </div>
+  </div>
+  <button class="ask-btn" onclick="sendPrompt('Ayúdame a desarrollar más la identidad de marca de LSLB')">Desarrollar identidad de marca ↗</button>
+</div>
+
+<div id="productos" class="section">
+  <div class="grid-3" style="margin-bottom:1rem">
+    <div class="metric"><p class="metric-label">Bandanas</p><p class="metric-value">3</p><p class="metric-sub">diseños</p></div>
+    <div class="metric"><p class="metric-label">Mugs</p><p class="metric-value">2</p><p class="metric-sub">diseños</p></div>
+    <div class="metric"><p class="metric-label">Camisetas</p><p class="metric-value">2</p><p class="metric-sub">colores disponibles</p></div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Bandanas — scrunchie style</p>
+    <div class="product-row">
+      <div class="product-dot dot-pink"></div>
+      <div>
+        <p class="product-name">Like mother, like dog-hter</p>
+        <p class="product-detail">Rosa rayada · estampado azul marino · par con camiseta rosa</p>
+        <div style="margin-top:5px">
+          <span class="tag tag-pink">XS</span><span class="tag tag-pink">S ★</span><span class="tag tag-pink">M</span><span class="tag tag-gray">L — pedido</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-row">
+      <div class="product-dot dot-amber"></div>
+      <div>
+        <p class="product-name">Love at first woof</p>
+        <p class="product-detail">Crema · corazón rojo · par con camiseta crema</p>
+        <div style="margin-top:5px">
+          <span class="tag tag-amber">XS</span><span class="tag tag-amber">S ★</span><span class="tag tag-amber">M</span><span class="tag tag-gray">L — pedido</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-row">
+      <div class="product-dot dot-teal"></div>
+      <div>
+        <p class="product-name">Got it from my mama</p>
+        <p class="product-detail">Turquesa · estampado naranja · pieza independiente</p>
+        <div style="margin-top:5px">
+          <span class="tag tag-teal">XS</span><span class="tag tag-teal">S ★</span><span class="tag tag-teal">M</span><span class="tag tag-gray">L — pedido</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <p class="card-title">Mugs</p>
+      <div class="product-row">
+        <div class="product-dot dot-pink"></div>
+        <div>
+          <p class="product-name">Dog Mama</p>
+          <p class="product-detail">Rayas rosa/coral · letras blancas</p>
+          <span class="status status-done" style="margin-top:5px;display:inline-flex">listo</span>
+        </div>
+      </div>
+      <div class="product-row">
+        <div class="product-dot dot-amber"></div>
+        <div>
+          <p class="product-name">Love at first woof</p>
+          <p class="product-detail">Rayas amarillo/crema · corazón navy</p>
+          <span class="status status-done" style="margin-top:5px;display:inline-flex">listo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="card-title">Camisetas humanas</p>
+      <div class="product-row">
+        <div class="product-dot dot-pink"></div>
+        <div>
+          <p class="product-name">Like mother, like dog-hter</p>
+          <p class="product-detail">Camiseta rosa · estampado azul</p>
+          <span class="status status-pending" style="margin-top:5px;display:inline-flex">estampar</span>
+        </div>
+      </div>
+      <div class="product-row">
+        <div class="product-dot dot-amber"></div>
+        <div>
+          <p class="product-name">Love at first woof</p>
+          <p class="product-detail">Camiseta crema oversized · estampado rojo</p>
+          <span class="status status-done" style="margin-top:5px;display:inline-flex">lista para video</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Inventario sugerido — colección cápsula</p>
+    <div style="overflow-x:auto">
+      <table style="width:100%;font-size:13px;border-collapse:collapse">
+        <thead>
+          <tr style="border-bottom:0.5px solid var(--color-border-tertiary)">
+            <th style="text-align:left;padding:6px 8px;color:var(--color-text-secondary);font-weight:500">Producto</th>
+            <th style="text-align:center;padding:6px 8px;color:var(--color-text-secondary);font-weight:500">XS</th>
+            <th style="text-align:center;padding:6px 8px;color:var(--color-text-secondary);font-weight:500">S</th>
+            <th style="text-align:center;padding:6px 8px;color:var(--color-text-secondary);font-weight:500">M</th>
+            <th style="text-align:center;padding:6px 8px;color:var(--color-text-secondary);font-weight:500">L</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:0.5px solid var(--color-border-tertiary)">
+            <td style="padding:6px 8px;color:var(--color-text-primary)">Bandanas (c/u)</td>
+            <td style="text-align:center;padding:6px 8px">2</td>
+            <td style="text-align:center;padding:6px 8px;font-weight:500">3 ★</td>
+            <td style="text-align:center;padding:6px 8px">2</td>
+            <td style="text-align:center;padding:6px 8px;color:var(--color-text-tertiary)">pedido</td>
+          </tr>
+          <tr style="border-bottom:0.5px solid var(--color-border-tertiary)">
+            <td style="padding:6px 8px;color:var(--color-text-primary)">Mugs (c/u)</td>
+            <td style="text-align:center;padding:6px 8px;color:var(--color-text-tertiary)" colspan="4">3 unidades por diseño</td>
+          </tr>
+          <tr>
+            <td style="padding:6px 8px;color:var(--color-text-primary)">Camisetas (c/u)</td>
+            <td style="text-align:center;padding:6px 8px">1</td>
+            <td style="text-align:center;padding:6px 8px;font-weight:500">2 ★</td>
+            <td style="text-align:center;padding:6px 8px">2</td>
+            <td style="text-align:center;padding:6px 8px;color:var(--color-text-tertiary)">pedido</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <button class="ask-btn" onclick="sendPrompt('Ayúdame a definir los precios de los productos de LSLB')">Definir precios ↗</button>
+</div>
+
+<div id="contenido" class="section">
+  <div class="grid-3" style="margin-bottom:1rem">
+    <div class="metric"><p class="metric-label">Lanzamiento</p><p class="metric-value">Sáb 2</p><p class="metric-sub">mayo 2026</p></div>
+    <div class="metric"><p class="metric-label">Día de madres</p><p class="metric-value">Dom 10</p><p class="metric-sub">mayo 2026</p></div>
+    <div class="metric"><p class="metric-label">Días entre fechas</p><p class="metric-value">8</p><p class="metric-sub">días clave</p></div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Plan de publicaciones</p>
+    <div class="timeline-item">
+      <div class="timeline-date">Mié 30 abr</div>
+      <div>
+        <p class="timeline-content">Post 1 — Lana sobre los papeles</p>
+        <p class="timeline-note">Primer post de expectativa · publicar 9-11am</p>
+        <span class="status status-done" style="margin-top:5px;display:inline-flex">publicado</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Jue 1 mayo</div>
+      <div>
+        <p class="timeline-content">Teaser video costura + Post 2 — Lana con gafas</p>
+        <p class="timeline-note">Grabar temprano · luz ventana mañana · camiseta crema + mug + bandana Lana</p>
+        <span class="status status-soon" style="margin-top:5px;display:inline-flex">hoy</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Vie 2 mayo</div>
+      <div>
+        <p class="timeline-content">Post 3 — "you ready?"</p>
+        <p class="timeline-note">Último post de expectativa antes del lanzamiento</p>
+        <span class="status status-pending" style="margin-top:5px;display:inline-flex">pendiente</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Sáb 3 mayo</div>
+      <div>
+        <p class="timeline-content">LANZAMIENTO — 9am post you ready + 12pm video colección</p>
+        <p class="timeline-note">Video 3 clips montados · 30-45 seg · música lo-fi</p>
+        <span class="status status-pending" style="margin-top:5px;display:inline-flex">pendiente</span>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Dom 4</div>
+      <div>
+        <p class="timeline-content">Duo outfit — tú y Lana matching</p>
+        <p class="timeline-note">Like mother, like dog-hter · camiseta + bandana rosa</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Lun 5</div>
+      <div>
+        <p class="timeline-content">Flat lay colección completa</p>
+        <p class="timeline-note">Meet the collection · todos los productos juntos</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Mar 6</div>
+      <div>
+        <p class="timeline-content">Carrusel de producto individual</p>
+        <p class="timeline-note">Una por una · cada bandana y mug con su foto</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Mié 7</div>
+      <div>
+        <p class="timeline-content">Detail shots — costura, scrunchie, estampado</p>
+        <p class="timeline-note">It's all in the details · fotos macro</p>
+      </div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-date">Dom 10</div>
+      <div>
+        <p class="timeline-content">Día de las madres — post especial</p>
+        <p class="timeline-note">El más personal · tú y Lana · cierre de campaña</p>
+        <span class="status status-pending" style="margin-top:5px;display:inline-flex">caption pendiente</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Checklist rodaje jueves</p>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Camiseta crema lavada y lista</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Mug Love at first woof limpio sin huellas</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Bandana crema de Lana planchada</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Trípode listo y probado</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Superficie blanca/lino para flat lay</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Snacks de Lana para el rodaje</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Grabar antes del mediodía</label>
+    </div>
+  </div>
+  <button class="ask-btn" onclick="sendPrompt('Ayúdame a escribir el caption del día de las madres para LSLB el 10 de mayo')">Escribir caption día de madres ↗</button>
+</div>
+
+<div id="captions" class="section">
+  <div class="card">
+    <p class="card-title">Post 1 — Lana sobre los papeles</p>
+    <span class="status status-done">publicado</span>
+    <div class="caption-box">lana lo sabe. los papeles lo dicen. algo está por pasar 🗂️🐾
+
+behind the scenes de lo que llevamos tiempo cocinando.
+coming soon no es figura — es este sábado 2 de mayo.
+y te lo prometemos — va a valer la pena.
+
+LANA SUBE · LANA BAJA
+slow premium dog accessories</div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Post 2 — Lana con gafas "for dog lovers only"</p>
+    <span class="status status-done">publicado</span>
+    <div class="caption-box">for dog lovers only. y tú sabes si eres uno de los nuestros 🕶️
+
+statement pieces para perros con carácter y dueños con gusto.
+diseño + funcionalidad + mucho amor de lana.
+
+sábado 2 de mayo — ya casi 🔗
+
+LANA SUBE · LANA BAJA</div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Post 3 — "you ready?"</p>
+    <span class="status status-pending">pendiente</span>
+    <div class="caption-box">you ready? porque nosotras sí 🐾
+
+este sábado 2 de mayo abrimos.
+link en bio — no te lo pierdas.
+
+LANA SUBE · LANA BAJA
+for dog lovers only</div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Post lanzamiento — sábado 2 mayo</p>
+    <span class="status status-pending">pendiente</span>
+    <div class="caption-box">ya estamos 🐾
+
+dog mom collection — para ti y para ella.
+scrunchie bandanas · mugs · camisetas
+
+link en bio · envíos a todo colombia
+
+LANA SUBE · LANA BAJA
+for dog lovers only</div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Post teaser costura</p>
+    <span class="status status-soon">grabar hoy</span>
+    <div class="caption-box">las manos detrás de cada pieza 🧵
+
+slow made. con intención. con amor.
+este sábado — lana sube · lana baja 🐾</div>
+    <p style="font-size:12px;color:var(--color-text-tertiary);margin-top:8px">Texto en video: "made with intention. · lana sube · lana baja"</p>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Post día de las madres — 10 mayo</p>
+    <span class="status status-pending">caption por escribir</span>
+    <div class="caption-box" style="color:var(--color-text-tertiary);font-style:italic">pendiente — el más especial de la campaña</div>
+    <button class="ask-btn" onclick="sendPrompt('Escribe el caption del post del día de las madres 10 de mayo para LSLB, que sea el cierre emocional de la campaña, spanglish, divertido pero íntimo')">Escribir este caption ↗</button>
+  </div>
+</div>
+
+<div id="hashtags" class="section">
+  <div class="card">
+    <p class="card-title">Hashtag de marca — siempre en todos los posts</p>
+    <div class="hashtag-grid">
+      <span class="hashtag hashtag-fixed">#lanasubelanabaja</span>
+      <span class="hashtag hashtag-fixed">#dogmom</span>
+      <span class="hashtag hashtag-fixed">#dogmomcolombia</span>
+      <span class="hashtag hashtag-fixed">#perrascolombia</span>
+      <span class="hashtag hashtag-fixed">#fordogloversonly</span>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <p class="card-title">Set A — producto y marca</p>
+      <div class="hashtag-grid">
+        <span class="hashtag">#dogaccessories</span>
+        <span class="hashtag">#dogbandana</span>
+        <span class="hashtag">#bandanasperro</span>
+        <span class="hashtag">#perroscolombia</span>
+        <span class="hashtag">#perroscali</span>
+        <span class="hashtag">#mascotascolombia</span>
+        <span class="hashtag">#slowfashion</span>
+        <span class="hashtag">#smallbusiness</span>
+        <span class="hashtag">#emprendimientocolombiano</span>
+        <span class="hashtag">#hechoencolombia</span>
+        <span class="hashtag">#tiendaslindas</span>
+        <span class="hashtag">#regalodiadelamadre</span>
+        <span class="hashtag">#dogmomgift</span>
+        <span class="hashtag">#giftforher</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="card-title">Set B — lifestyle y behind the scenes</p>
+      <div class="hashtag-grid">
+        <span class="hashtag">#maltipoo</span>
+        <span class="hashtag">#maltipoosofinstagram</span>
+        <span class="hashtag">#dogmomlife</span>
+        <span class="hashtag">#miperrita</span>
+        <span class="hashtag">#slowliving</span>
+        <span class="hashtag">#slowmorning</span>
+        <span class="hashtag">#intentionalliving</span>
+        <span class="hashtag">#behindthebrand</span>
+        <span class="hashtag">#smallbusinessowner</span>
+        <span class="hashtag">#brandbuilding</span>
+        <span class="hashtag">#emprendedoracolombia</span>
+        <span class="hashtag">#marcacolombiana</span>
+        <span class="hashtag">#dogmamas</span>
+        <span class="hashtag">#dogdaughter</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Hashtags por post</p>
+    <div class="timeline-item"><div class="timeline-date" style="font-size:11px">Mié 30</div><div><p class="timeline-content" style="font-size:13px">Set B + #comingsoon #lanzamiento</p></div></div>
+    <div class="timeline-item"><div class="timeline-date" style="font-size:11px">Jue teaser</div><div><p class="timeline-content" style="font-size:13px">Set B + #handmade #slowmade #behindthescenes</p></div></div>
+    <div class="timeline-item"><div class="timeline-date" style="font-size:11px">Vie 2</div><div><p class="timeline-content" style="font-size:13px">Set A+B + #fordogloversonly #dogmomstyle</p></div></div>
+    <div class="timeline-item"><div class="timeline-date" style="font-size:11px">Sáb lanzamiento</div><div><p class="timeline-content" style="font-size:13px">Set A + #dogmomcollection #regalodiadelamadre</p></div></div>
+    <div class="timeline-item"><div class="timeline-date" style="font-size:11px">Dom 10</div><div><p class="timeline-content" style="font-size:13px">Set A+B + #diadelamadre #felizdiamama #diadelamadre2026</p></div></div>
+  </div>
+  <p style="font-size:12px;color:var(--color-text-tertiary);margin-top:0.5rem">Tip: pon los hashtags en el primer comentario, no en el caption — mantiene el texto limpio y premium</p>
+</div>
+
+<div id="web" class="section">
+  <div class="grid-2" style="margin-bottom:1rem">
+    <div class="card">
+      <p class="card-title">Shopify</p>
+      <div class="info-row"><span class="info-label">Plan</span><span class="info-value">3 meses por $1 USD</span></div>
+      <div class="info-row"><span class="info-label">Estado</span><span class="status status-soon">activar esta semana</span></div>
+      <div class="info-row"><span class="info-label">Dominio</span><span class="info-value">por confirmar</span></div>
+      <div class="info-row"><span class="info-label">Pasarela de pagos</span><span class="info-value">Wompi / Mercado Pago</span></div>
+    </div>
+    <div class="card">
+      <p class="card-title">Timeline web</p>
+      <div class="timeline-item"><div class="timeline-date" style="font-size:11px">Esta semana</div><div><p class="timeline-content" style="font-size:13px">Activar cuenta + dominio</p></div></div>
+      <div class="timeline-item"><div class="timeline-date" style="font-size:11px">Sem 5-9</div><div><p class="timeline-content" style="font-size:13px">Montar tienda con fotos del jueves</p></div></div>
+      <div class="timeline-item"><div class="timeline-date" style="font-size:11px">Antes 10 may</div><div><p class="timeline-content" style="font-size:13px">Tienda live para día de madres</p></div></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Textos pendientes para Shopify</p>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> About page — historia de Daniela + Lana + LSLB</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Homepage hero copy</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Descripciones de cada producto</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Política de envíos</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> FAQ — tallas, tiempos, cuidado de bandanas</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Política de cambios y devoluciones</label>
+    </div>
+    <button class="ask-btn" onclick="sendPrompt('Escribe el about page de LSLB para Shopify — historia de Daniela, Lana, y la marca')">Escribir about page ↗</button>
+  </div>
+</div>
+
+<div id="admin" class="section">
+  <div class="card">
+    <p class="card-title">Canal de ventas actual</p>
+    <div class="info-row"><span class="info-label">Método</span><span class="info-value">Instagram DMs</span></div>
+    <div class="info-row"><span class="info-label">Seguidores actuales</span><span class="info-value">~3,200 (cuenta anterior)</span></div>
+    <div class="info-row"><span class="info-label">Envíos</span><span class="info-value">todo Colombia — por definir operador</span></div>
+    <div class="info-row"><span class="info-label">Tallas sobre pedido</span><span class="info-value">L y XXS</span></div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Pendientes admin</p>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:14px">
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Definir operador de envíos (Coordinadora, Interrapidísimo, etc)</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Definir precios de venta al público</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Abrir cuenta bancaria o Nequi para recibir pagos</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Activar Shopify + dominio</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Cambiar camisetas en tienda (lunes)</label>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer"><input type="checkbox"> Definir tiempo de producción para pedidos sobre pedido</label>
+    </div>
+  </div>
+
+  <div class="card">
+    <p class="card-title">Notas de producción</p>
+    <div class="card-content">
+      <p style="margin-bottom:8px">Camisetas: conseguir referencias correctas el lunes · 2 colores (rosa, crema)</p>
+      <p style="margin-bottom:8px">Bandanas: talla S es talla estrella — Lana es S, mayoría perros pequeños</p>
+      <p>Mugs: frágiles para envíos · considerar empaque especial · opción sobre pedido viable</p>
+    </div>
+  </div>
+  <button class="ask-btn" onclick="sendPrompt('Ayúdame a calcular los precios de venta de LSLB con margen justo')">Calcular precios de venta ↗</button>
+</div>
+
+<script>
+function showTab(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  event.target.classList.add('active');
+}
+</script>
