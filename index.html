@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LANA SUBE · LANA BAJA — Brand Guidelines 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400;1,9..144,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F1EFE8;
+    --black: #1C1C1C;
+    --gray: #888780;
+    --gray-light: #D3D1C7;
+    --white: #FFFFFF;
+    --rosa: #F5E1E8;
+    --turquesa: #B8DDD3;
+    --rojo: #C73E2E;
+    --naranja: #E89B47;
+    --azul: #2D2A6B;
+    --rosa-dark: #72243E;
+    --turquesa-dark: #085041;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--black);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--cream);
+    text-decoration: none;
+    line-height: 1.1;
+  }
+
+  .nav-logo span {
+    display: block;
+    color: #444;
+    transform: rotate(180deg);
+    font-size: 11px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    color: var(--gray);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--cream); }
+
+  /* ===== SECTIONS ===== */
+  section { padding: 96px 40px; }
+
+  .section-eyebrow {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: var(--gray);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 48px;
+  }
+
+  .section-title em { font-style: italic; }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: var(--gray-light);
+    margin: 64px 0;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    background: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 40px 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: radial-gradient(ellipse at 30% 70%, rgba(245,225,232,0.04) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 30%, rgba(184,221,211,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    color: var(--gray);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    border: 1px solid #333;
+    padding: 6px 16px;
+    display: inline-block;
+  }
+
+  .hero-logo-main {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(32px, 6vw, 72px);
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--cream);
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  .hero-logo-mirror {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(32px, 6vw, 72px);
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: #333;
+    line-height: 1;
+    transform: rotate(180deg);
+    display: block;
+    margin-bottom: 48px;
+  }
+
+  .hero-tagline {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(18px, 2.5vw, 26px);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--gray);
+    margin-bottom: 64px;
+    max-width: 480px;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 48px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta-item {
+    text-align: center;
+  }
+
+  .hero-meta-label {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #444;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .hero-meta-value {
+    font-size: 12px;
+    color: var(--gray);
+    letter-spacing: 0.05em;
+  }
+
+  /* ===== BRAND ESSENCE ===== */
+  .essence {
+    background: var(--cream);
+  }
+
+  .essence-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .essence-card {
+    background: var(--white);
+    padding: 40px;
+  }
+
+  .essence-card:nth-child(1) { background: var(--rosa); }
+  .essence-card:nth-child(2) { background: var(--cream); border: 1px solid var(--gray-light); }
+  .essence-card:nth-child(3) { background: var(--cream); border: 1px solid var(--gray-light); }
+  .essence-card:nth-child(4) { background: var(--turquesa); }
+
+  .essence-number {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: var(--gray);
+    margin-bottom: 16px;
+  }
+
+  .essence-title {
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--black);
+  }
+
+  .essence-desc {
+    font-size: 13px;
+    color: var(--black);
+    line-height: 1.7;
+    opacity: 0.8;
+  }
+
+  /* ===== COLORS ===== */
+  .colors { background: var(--black); }
+  .colors .section-eyebrow { color: #444; }
+  .colors .section-title { color: var(--cream); }
+
+  .color-group-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #444;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    margin-top: 48px;
+  }
+
+  .color-group-label:first-of-type { margin-top: 0; }
+
+  .colors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+
+  .color-swatch {
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.15s;
+  }
+
+  .color-swatch:hover { transform: translateY(-2px); }
+
+  .color-block {
+    height: 100px;
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    position: relative;
+  }
+
+  .color-copy {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    opacity: 0;
+    transition: opacity 0.15s;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 2px;
+  }
+
+  .color-swatch:hover .color-copy { opacity: 1; }
+
+  .color-info {
+    padding: 12px 14px;
+    background: #111;
+  }
+
+  .color-name {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--cream);
+    margin-bottom: 2px;
+  }
+
+  .color-hex {
+    font-size: 11px;
+    color: #555;
+    font-family: monospace;
+    letter-spacing: 0.05em;
+  }
+
+  .color-use {
+    font-size: 10px;
+    color: #444;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+
+  /* ===== TYPOGRAPHY ===== */
+  .typography { background: var(--cream); }
+
+  .type-showcase {
+    margin-bottom: 64px;
+  }
+
+  .type-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--gray);
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--gray-light);
+  }
+
+  .type-h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--black);
+    margin-bottom: 8px;
+  }
+
+  .type-h1-italic {
+    font-family: 'Fraunces', serif;
+    font-size: 64px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 1;
+    letter-spacing: -0.025em;
+    color: var(--black);
+  }
+
+  .type-h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    color: var(--black);
+    margin-bottom: 8px;
+  }
+
+  .type-h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--black);
+  }
+
+  .type-body {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--black);
+    max-width: 560px;
+    margin-top: 16px;
+  }
+
+  .type-label-caps {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray);
+  }
+
+  .type-nav {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    color: var(--black);
+  }
+
+  .type-meta {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 8px;
+    font-family: monospace;
+  }
+
+  .type-specimen {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    padding: 32px 40px;
+    margin-top: 32px;
+  }
+
+  /* ===== LOGO ===== */
+  .logo-section { background: var(--black); }
+  .logo-section .section-eyebrow { color: #444; }
+  .logo-section .section-title { color: var(--cream); }
+
+  .logo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .logo-variant {
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .logo-variant-label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .logo-v1 { background: var(--cream); }
+  .logo-v1 .logo-variant-label { color: var(--gray); }
+
+  .logo-v2 { background: var(--black); border: 1px solid #222; }
+  .logo-v2 .logo-variant-label { color: #444; }
+
+  .logo-v3 { background: var(--rosa); }
+  .logo-v3 .logo-variant-label { color: var(--rosa-dark); }
+
+  .logo-text-dark {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--black);
+    line-height: 1;
+    text-align: center;
+  }
+
+  .logo-text-dark .mirror {
+    color: #aaa;
+    display: block;
+    transform: rotate(180deg);
+  }
+
+  .logo-text-light {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--cream);
+    line-height: 1;
+    text-align: center;
+  }
+
+  .logo-text-light .mirror {
+    color: #333;
+    display: block;
+    transform: rotate(180deg);
+  }
+
+  .logo-text-rosa {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--black);
+    line-height: 1;
+    text-align: center;
+  }
+
+  .logo-text-rosa .mirror {
+    color: rgba(114,36,62,0.3);
+    display: block;
+    transform: rotate(180deg);
+  }
+
+  .logo-dont {
+    margin-top: 48px;
+    background: #111;
+    padding: 32px 40px;
+  }
+
+  .logo-dont-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--rojo);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .logo-dont-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .logo-dont-list li {
+    font-size: 12px;
+    color: #444;
+    padding-left: 16px;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  .logo-dont-list li::before {
+    content: '✗';
+    position: absolute;
+    left: 0;
+    color: var(--rojo);
+    font-size: 10px;
+  }
+
+  /* ===== TOV ===== */
+  .tov { background: var(--rosa); }
+
+  .tov-pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-bottom: 48px;
+  }
+
+  .tov-pillar {
+    background: var(--cream);
+    padding: 36px;
+  }
+
+  .tov-pillar-title {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--black);
+  }
+
+  .tov-pillar-desc {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    margin-top: 32px;
+  }
+
+  .vocab-card {
+    padding: 32px 36px;
+  }
+
+  .vocab-yes { background: var(--black); }
+  .vocab-no { background: var(--black); border-left: 3px solid var(--rojo); }
+
+  .vocab-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .vocab-yes .vocab-title { color: var(--turquesa); }
+  .vocab-no .vocab-title { color: var(--rojo); }
+
+  .vocab-list {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 2;
+  }
+
+  .vocab-list span {
+    display: inline-block;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    background: #222;
+    padding: 2px 10px;
+    font-size: 12px;
+  }
+
+  /* ===== COPY EXAMPLES ===== */
+  .copy-examples { background: var(--cream); }
+
+  .example-pair {
+    margin-bottom: 32px;
+    border: 1px solid var(--gray-light);
+  }
+
+  .example-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gray);
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--gray-light);
+    background: var(--white);
+  }
+
+  .example-bad {
+    padding: 16px 20px;
+    font-size: 13px;
+    color: var(--gray);
+    border-bottom: 1px solid var(--gray-light);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .example-good {
+    padding: 16px 20px;
+    font-size: 13px;
+    color: var(--black);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    background: #FAFAF7;
+  }
+
+  .ex-icon {
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .ex-bad { color: var(--rojo); }
+  .ex-good { color: #1D9E75; }
+
+  /* ===== PHRASES ===== */
+  .phrases { background: var(--black); }
+  .phrases .section-title { color: var(--cream); }
+  .phrases .section-eyebrow { color: #444; }
+
+  .phrase-list {
+    list-style: none;
+    margin-top: 48px;
+  }
+
+  .phrase-item {
+    padding: 28px 0;
+    border-bottom: 1px solid #222;
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+  }
+
+  .phrase-num {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: #333;
+    flex-shrink: 0;
+    width: 24px;
+  }
+
+  .phrase-text {
+    font-family: 'Fraunces', serif;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1.2;
+  }
+
+  .phrase-note {
+    font-size: 12px;
+    color: #444;
+    margin-left: auto;
+    text-align: right;
+    max-width: 200px;
+    flex-shrink: 0;
+  }
+
+  /* ===== SPANGLISH ===== */
+  .spanglish { background: var(--turquesa); }
+
+  .spanglish-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .spanglish-card {
+    background: var(--cream);
+    padding: 32px;
+  }
+
+  .spanglish-lang {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 12px;
+  }
+
+  .spanglish-title {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 12px;
+    color: var(--black);
+  }
+
+  .spanglish-desc {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  .spanglish-examples {
+    font-size: 12px;
+    color: var(--black);
+    font-style: italic;
+    line-height: 1.8;
+    border-left: 2px solid var(--gray-light);
+    padding-left: 12px;
+  }
+
+  /* ===== FORMAT RULES ===== */
+  .format { background: var(--cream); }
+
+  .format-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .format-card {
+    background: var(--white);
+    padding: 28px 32px;
+    border: 1px solid var(--gray-light);
+  }
+
+  .format-icon {
+    font-size: 20px;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .format-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 8px;
+  }
+
+  .format-rule {
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 1.65;
+  }
+
+  .format-rule strong {
+    color: var(--black);
+    font-weight: 500;
+  }
+
+  /* ===== PHOTOGRAPHY ===== */
+  .photography { background: var(--black); }
+  .photography .section-eyebrow { color: #444; }
+  .photography .section-title { color: var(--cream); }
+
+  .photo-types {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .photo-type {
+    padding: 32px 24px;
+  }
+
+  .photo-type:nth-child(1) { background: var(--rosa); }
+  .photo-type:nth-child(2) { background: var(--turquesa); }
+  .photo-type:nth-child(3) { background: #222; }
+  .photo-type:nth-child(4) { background: var(--azul); }
+
+  .photo-type-num {
+    font-size: 28px;
+    font-weight: 700;
+    opacity: 0.15;
+    margin-bottom: 16px;
+    font-family: 'Fraunces', serif;
+    color: var(--black);
+  }
+
+  .photo-type:nth-child(3) .photo-type-num,
+  .photo-type:nth-child(4) .photo-type-num { color: var(--cream); }
+
+  .photo-type-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    color: var(--black);
+  }
+
+  .photo-type:nth-child(3) .photo-type-title,
+  .photo-type:nth-child(4) .photo-type-title { color: var(--cream); }
+
+  .photo-type-desc {
+    font-size: 12px;
+    line-height: 1.65;
+    color: rgba(28,28,28,0.7);
+  }
+
+  .photo-type:nth-child(3) .photo-type-desc { color: #555; }
+  .photo-type:nth-child(4) .photo-type-desc { color: rgba(241,239,232,0.5); }
+
+  .photo-donts {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+  }
+
+  .photo-dont-item {
+    background: #111;
+    padding: 20px 24px;
+    font-size: 12px;
+    color: #444;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.5;
+  }
+
+  .photo-dont-item::before {
+    content: '✗';
+    color: var(--rojo);
+    font-size: 11px;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ===== HASHTAGS ===== */
+  .hashtags { background: var(--cream); }
+
+  .hashtag-fixed {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 32px 0 48px;
+  }
+
+  .hashtag-tag {
+    font-size: 13px;
+    font-weight: 500;
+    background: var(--black);
+    color: var(--cream);
+    padding: 8px 18px;
+    letter-spacing: 0.03em;
+  }
+
+  .hashtag-tag.optional {
+    background: transparent;
+    border: 1px solid var(--gray-light);
+    color: var(--gray);
+  }
+
+  .hashtag-rule {
+    background: var(--rosa);
+    padding: 20px 28px;
+    font-size: 13px;
+    color: var(--black);
+    border-left: 3px solid var(--rojo);
+    line-height: 1.65;
+  }
+
+  /* ===== BUTTONS ===== */
+  .buttons { background: var(--black); }
+  .buttons .section-title { color: var(--cream); }
+  .buttons .section-eyebrow { color: #444; }
+
+  .btn-showcase {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  .btn-primary {
+    background: var(--cream);
+    color: var(--black);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: transparent;
+    color: var(--cream);
+    outline: 1px solid var(--cream);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--cream);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 13px 32px;
+    border: 1px solid var(--cream);
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background: var(--cream);
+    color: var(--black);
+  }
+
+  .btn-cta {
+    background: var(--rojo);
+    color: var(--cream);
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+
+  .btn-spec {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .btn-spec-item {
+    background: #111;
+    padding: 24px;
+  }
+
+  .btn-spec-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: #444;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .btn-spec-detail {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.9;
+    font-family: monospace;
+  }
+
+  .btn-spec-detail span {
+    color: var(--cream);
+  }
+
+  /* ===== CHANNELS ===== */
+  .channels { background: var(--cream); }
+
+  .channel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .channel-card {
+    padding: 36px;
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+  }
+
+  .channel-icon {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .channel-name {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 16px;
+  }
+
+  .channel-rules {
+    list-style: none;
+    font-size: 12px;
+    color: var(--gray);
+    line-height: 2;
+  }
+
+  .channel-rules li::before {
+    content: '→ ';
+    color: var(--gray-light);
+  }
+
+  /* ===== SENTIMENT RULES ===== */
+  .sentiment { background: var(--azul); }
+
+  .sentiment .section-title { color: var(--cream); }
+  .sentiment .section-eyebrow { color: rgba(184,221,211,0.5); }
+
+  .sentiment-rules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 48px;
+  }
+
+  .sentiment-rule {
+    background: rgba(255,255,255,0.05);
+    padding: 32px;
+    border-top: 2px solid rgba(184,221,211,0.3);
+  }
+
+  .sentiment-num {
+    font-family: 'Fraunces', serif;
+    font-size: 48px;
+    font-weight: 300;
+    color: rgba(184,221,211,0.2);
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .sentiment-title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--turquesa);
+    margin-bottom: 10px;
+  }
+
+  .sentiment-desc {
+    font-size: 13px;
+    color: rgba(241,239,232,0.6);
+    line-height: 1.7;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--black);
+    padding: 60px 40px;
+    text-align: center;
+    border-top: 1px solid #222;
+  }
+
+  .footer-logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: var(--cream);
+    margin-bottom: 0;
+  }
+
+  .footer-mirror {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    color: #333;
+    transform: rotate(180deg);
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .footer-tagline {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 8px;
+  }
+
+  .footer-meta {
+    font-size: 10px;
+    color: #333;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    section { padding: 64px 20px; }
+    .essence-grid,
+    .tov-pillars,
+    .vocab-grid,
+    .spanglish-grid,
+    .format-grid,
+    .photo-types,
+    .photo-donts,
+    .btn-spec,
+    .channel-grid,
+    .sentiment-rules,
+    .logo-grid { grid-template-columns: 1fr; }
+    .section-title { font-size: 32px; }
+    .type-h1, .type-h1-italic { font-size: 40px; }
+    .phrase-text { font-size: 20px; }
+    .phrase-note { display: none; }
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero > * {
+    animation: fadeUp 0.8s ease forwards;
+    opacity: 0;
+  }
+
+  .hero > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero > *:nth-child(2) { animation-delay: 0.2s; }
+  .hero > *:nth-child(3) { animation-delay: 0.35s; }
+  .hero > *:nth-child(4) { animation-delay: 0.5s; }
+  .hero > *:nth-child(5) { animation-delay: 0.65s; }
+
+  /* Clipboard copy feedback */
+  .copied {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--black);
+    color: var(--cream);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding: 10px 20px;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    z-index: 200;
+  }
+
+  .copied.show { opacity: 1; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">
+    LANA SUBE
+    <span>LANA BAJA</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#esencia">Esencia</a></li>
+    <li><a href="#colores">Colores</a></li>
+    <li><a href="#tipografia">Tipografía</a></li>
+    <li><a href="#logo">Logo</a></li>
+    <li><a href="#tov">TOV</a></li>
+    <li><a href="#frases">Frases</a></li>
+    <li><a href="#fotografia">Foto</a></li>
+    <li><a href="#canales">Canales</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-badge">Brand Guidelines · v1 · 2026</div>
+  <div>
+    <p class="hero-logo-main">LANA SUBE</p>
+    <span class="hero-logo-mirror">LANA BAJA</span>
+  </div>
+  <p class="hero-tagline">slow premium dog accessories — for dog lovers only.</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <p class="hero-meta-label">Fundadora</p>
+      <p class="hero-meta-value">Daniela Perea</p>
+    </div>
+    <div class="hero-meta-item">
+      <p class="hero-meta-label">Co-fundadora</p>
+      <p class="hero-meta-value">Lana (maltipoo)</p>
+    </div>
+    <div class="hero-meta-item">
+      <p class="hero-meta-label">Origen</p>
+      <p class="hero-meta-value">Cali, Colombia</p>
+    </div>
+    <div class="hero-meta-item">
+      <p class="hero-meta-label">Instagram</p>
+      <p class="hero-meta-value">@lanasubelanabaja.co</p>
+    </div>
+    <div class="hero-meta-item">
+      <p class="hero-meta-label">Website</p>
+      <p class="hero-meta-value">lanasubelanabaja.co</p>
+    </div>
+  </div>
+</section>
+
+<!-- ESENCIA -->
+<section class="essence" id="esencia">
+  <p class="section-eyebrow">01 · La Marca</p>
+  <h2 class="section-title">la esencia<br><em>de todo.</em></h2>
+  <p style="font-size:15px;color:var(--gray);max-width:560px;margin-bottom:8px;">LSLB es una marca de slow premium dog accessories — statement pieces con diseño y funcionalidad para perritos y sus dog moms. Hecha con intención, en small batches, aprobada por Lana.</p>
+  <p style="font-size:13px;color:var(--gray-light);max-width:560px;">Audiencia: dog moms millennials con gusto · Colombia y Latam</p>
+  <div class="essence-grid">
+    <div class="essence-card">
+      <p class="essence-number">01</p>
+      <p class="essence-title">la amiga con gusto</p>
+      <p class="essence-desc">No la marca corporativa. La amiga que te recomienda algo bueno y te lo dice como si fuera secreto. Cercana, pero con criterio.</p>
+    </div>
+    <div class="essence-card">
+      <p class="essence-number">02</p>
+      <p class="essence-title">divertida con criterio</p>
+      <p class="essence-desc">Hacemos chistes pero no somos chistosas. El humor viene de la observación, no del slapstick. Siempre con intención.</p>
+    </div>
+    <div class="essence-card">
+      <p class="essence-number">03</p>
+      <p class="essence-title">premium sin pretensión</p>
+      <p class="essence-desc">Bien hecho, bien pensado. Nunca distante ni elitista. Premium se siente, no se anuncia. Sin signos de exclamación.</p>
+    </div>
+    <div class="essence-card">
+      <p class="essence-number">04</p>
+      <p class="essence-title">slow & con intención</p>
+      <p class="essence-desc">Pocas palabras, bien escogidas. No empujamos, mostramos. Cero "compra ya". Cada pieza existe porque la queremos para nosotras.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COLORES -->
+<section class="colors" id="colores">
+  <p class="section-eyebrow">02 · Paleta de Colores</p>
+  <h2 class="section-title" style="color:var(--cream);">el sistema<br><em>de color.</em></h2>
+
+  <p class="color-group-label">Base · Neutros</p>
+  <div class="colors-grid">
+    <div class="color-swatch" onclick="copyColor('#F1EFE8')">
+      <div class="color-block" style="background:#F1EFE8;"><span class="color-copy" style="color:#1C1C1C;">#F1EFE8</span></div>
+      <div class="color-info"><p class="color-name">Fondo</p><p class="color-hex">#F1EFE8</p><p class="color-use">Fondo base · siempre</p></div>
+    </div>
+    <div class="color-swatch" onclick="copyColor('#1C1C1C')">
+      <div class="color-block" style="background:#1C1C1C;"><span class="color-copy">#1C1C1C</span></div>
+      <div class="color-info"><p class="color-name">Negro</p><p class="color-hex">#1C1C1C</p><p class="color-use">Texto principal · botones</p></div>
+    </div>
+    <div class="color-swatch" onclick="copyColor('#888780')">
+      <div class="color-block" style="background:#888780;"><span class="color-copy">#888780</span></div>
+      <div class="color-info"><p class="color-name">Gris</p><p class="color-hex">#888780</p><p class="color-use">Texto secundario · labels</p></div>
+    </div>
+    <div class="color-swatch" onclick="copyColor('#FFFFFF')">
+      <div class="color-block" style="background:#FFFFFF; border:1px solid #333;"><span class="color-copy" style="color:#1C1C1C;">#FFFFFF</span></div>
+      <div class="color-info"><p class="color-name">Blanco</p><p class="color-hex">#FFFFFF</p><p class="color-use">Cards · inputs</p></div>
+    </div>
+  </div>
+
+  <p class="color-group-label">Primarios · De los productos</p>
+  <div class="colors-grid">
+    <div class="color-swatch" onclick="copyColor('#F5E1E8')">
+      <div class="color-block" style="background:#F5E1E8;"><span class="color-copy" style="color:#1C1C1C;">#F5E1E8</span></div>
+      <div class="color-info"><p class="color-name">Rosa Lana</p><p class="color-hex">#F5E1E8</p><p class="color-use">Hero · secciones de campaña</p></div>
+    </div>
+    <div class="color-swatch" onclick="copyColor('#B8DDD3')">
+      <div class="color-block" style="background:#B8DDD3;"><span class="color-copy" style="color:#1C1C1C;">#B8DDD3</span></div>
+      <div class="color-info"><p class="color-name">Turquesa</p><p class="color-hex">#B8DDD3</p><p class="color-use">About · acentos frescos</p></div>
+    </div>
+  </div>
+
+  <p class="color-group-label">Acentos · CTAs, sales, badges</p>
+  <div class="colors-grid">
+    <div class="color-swatch" onclick="copyColor('#C73E2E')">
+      <div class="color-block" style="background:#C73E2E;"><span class="color-copy">#C73E2E</span></div>
+      <div class="color-info"><p class="color-name">Rojo Woof</p><p class="color-hex">#C73E2E</p><p class="color-use">CTAs · badges · sale</p></div>
+    </div>
+    <div class="color-swatch" onclick="copyColor('#E89B47')">
+      <div class="color-block" style="background:#E89B47;"><span class="color-copy" style="color:#1C1C1C;">#E89B47</span></div>
+      <div class="color-info"><p class="color-name">Naranja Mama</p><p class="color-hex">#E89B47</p><p class="color-use">Tags · badges secundarios</p></div>
+    </div>
+    <div class="color-swatch" onclick="copyColor('#2D2A6B')">
+      <div class="color-block" style="background:#2D2A6B;"><span class="color-copy">#2D2A6B</span></div>
+      <div class="color-info"><p class="color-name">Azul Profundo</p><p class="color-hex">#2D2A6B</p><p class="color-use">Texto sobre rosa · editoriales</p></div>
+    </div>
+  </div>
+
+  <div style="margin-top:48px;background:#111;padding:32px 40px;">
+    <p style="font-size:10px;font-weight:600;letter-spacing:0.2em;color:#444;text-transform:uppercase;margin-bottom:16px;">Reglas de uso</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+      <p style="font-size:12px;color:#555;padding-left:16px;position:relative;line-height:1.65;">El fondo del sitio es <span style="color:var(--cream);">siempre #F1EFE8</span>. Nunca blanco puro.</p>
+      <p style="font-size:12px;color:#555;padding-left:16px;position:relative;line-height:1.65;">Los colores saturados (rosa, turquesa) son <span style="color:var(--cream);">acentos</span>, no fondos de página.</p>
+      <p style="font-size:12px;color:#555;padding-left:16px;position:relative;line-height:1.65;">Botones primarios: <span style="color:var(--cream);">#1C1C1C</span> con texto <span style="color:var(--cream);">#F1EFE8</span>.</p>
+      <p style="font-size:12px;color:#555;padding-left:16px;position:relative;line-height:1.65;"><span style="color:var(--rojo);">Sin gradientes. Sin sombras. Sin efectos.</span> Todo flat y limpio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIPOGRAFÍA -->
+<section class="typography" id="tipografia">
+  <p class="section-eyebrow">03 · Tipografía</p>
+  <h2 class="section-title">dos fuentes.<br><em>un sistema.</em></h2>
+
+  <div class="type-showcase">
+    <p class="type-label">Fraunces — Display · Headlines · Momentos editoriales</p>
+    <p class="type-h1">like mother,</p>
+    <p class="type-h1-italic">like dog-hter.</p>
+    <p class="type-meta">Fraunces · 64px · Regular 400 · Italic 400<br>Google Fonts: fonts.google.com/specimen/Fraunces</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:24px;">
+      <div>
+        <p style="font-size:10px;font-weight:600;letter-spacing:0.15em;color:var(--gray);text-transform:uppercase;margin-bottom:8px;">H1 Hero</p>
+        <p style="font-family:'Fraunces',serif;font-size:48px;font-weight:400;line-height:1;letter-spacing:-0.02em;">Headline</p>
+        <p style="font-size:11px;color:var(--gray);margin-top:4px;font-family:monospace;">48–64px · 400</p>
+      </div>
+      <div>
+        <p style="font-size:10px;font-weight:600;letter-spacing:0.15em;color:var(--gray);text-transform:uppercase;margin-bottom:8px;">H2 Sección</p>
+        <p style="font-family:'Fraunces',serif;font-size:36px;font-weight:400;font-style:italic;line-height:1.1;">Sección</p>
+        <p style="font-size:11px;color:var(--gray);margin-top:4px;font-family:monospace;">32–40px · 400 italic</p>
+      </div>
+      <div>
+        <p style="font-size:10px;font-weight:600;letter-spacing:0.15em;color:var(--gray);text-transform:uppercase;margin-bottom:8px;">H3 Subtítulo</p>
+        <p style="font-family:'Fraunces',serif;font-size:24px;font-weight:500;line-height:1.2;">Subtítulo</p>
+        <p style="font-size:11px;color:var(--gray);margin-top:4px;font-family:monospace;">22–26px · 500</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="type-showcase">
+    <p class="type-label">Poppins — Body · UI · Navegación · Todo lo demás</p>
+    <p class="type-body">Slow-made bandanas para dog moms con gusto. Cada pieza pasa por el cuello de Lana antes de llegar al tuyo. Si no le gusta, no se vende.</p>
+    <p class="type-meta" style="margin-top:12px;">Poppins · 16px · Regular 400 · line-height 1.65<br>Google Fonts: fonts.google.com/specimen/Poppins</p>
+
+    <div class="type-specimen">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:center;">
+        <div>
+          <p style="font-size:10px;font-weight:600;letter-spacing:0.15em;color:var(--gray);text-transform:uppercase;margin-bottom:8px;">Body</p>
+          <p style="font-size:16px;font-weight:400;color:var(--black);">Texto normal</p>
+          <p style="font-size:11px;color:var(--gray);margin-top:4px;font-family:monospace;">16px · 400</p>
+        </div>
+        <div>
+          <p style="font-size:10px;font-weight:600;letter-spacing:0.15em;color:var(--gray);text-transform:uppercase;margin-bottom:8px;">Labels / Nav</p>
+          <p style="font-size:13px;font-weight:500;color:var(--black);letter-spacing:0.08em;">SHOP · ABOUT</p>
+          <p style="font-size:11px;color:var(--gray);margin-top:4px;font-family:monospace;">13px · 500 · ls:0.08</p>
+        </div>
+        <div>
+          <p style="font-size:10px;font-weight:600;letter-spacing:0.15em;color:var(--gray);text-transform:uppercase;margin-bottom:8px;">Caps Labels</p>
+          <p style="font-size:11px;font-weight:600;color:var(--gray);letter-spacing:0.2em;text-transform:uppercase;">FOR DOGS</p>
+          <p style="font-size:11px;color:var(--gray);margin-top:4px;font-family:monospace;">10–11px · 600 · ls:0.2</p>
+        </div>
+        <div>
+          <p style="font-size:10px;font-weight:600;letter-spacing:0.15em;color:var(--gray);text-transform:uppercase;margin-bottom:8px;">Botones</p>
+          <p style="font-size:12px;font-weight:600;color:var(--black);letter-spacing:0.12em;text-transform:uppercase;">AÑADIR AL CARRITO</p>
+          <p style="font-size:11px;color:var(--gray);margin-top:4px;font-family:monospace;">12px · 600 · ls:0.12</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div>
+    <p class="type-label">Capitalización — las reglas</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-top:16px;">
+      <div style="background:var(--white);border:1px solid var(--gray-light);padding:24px 28px;">
+        <p style="font-size:10px;font-weight:600;letter-spacing:0.15em;color:#1D9E75;text-transform:uppercase;margin-bottom:10px;">✓ Correcto</p>
+        <p style="font-family:'Fraunces',serif;font-size:18px;font-style:italic;margin-bottom:4px;">like mother, like dog-hter</p>
+        <p style="font-size:11px;color:var(--gray);">Headlines → lowercase</p>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-light);padding:24px 28px;">
+        <p style="font-size:10px;font-weight:600;letter-spacing:0.15em;color:#1D9E75;text-transform:uppercase;margin-bottom:10px;">✓ Correcto</p>
+        <p style="font-size:13px;font-weight:600;letter-spacing:0.2em;color:var(--gray);text-transform:uppercase;margin-bottom:4px;">CAPSULE 01 · FOR DOGS</p>
+        <p style="font-size:11px;color:var(--gray);">Labels/tags → ALL CAPS</p>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-light);padding:24px 28px;">
+        <p style="font-size:10px;font-weight:600;letter-spacing:0.15em;color:#1D9E75;text-transform:uppercase;margin-bottom:10px;">✓ Correcto</p>
+        <p style="font-size:13px;font-weight:600;letter-spacing:0.18em;margin-bottom:4px;">LANA SUBE · LANA BAJA</p>
+        <p style="font-size:11px;color:var(--gray);">Logo y cierre → siempre CAPS</p>
+      </div>
+      <div style="background:var(--white);border:1px solid var(--gray-light);padding:24px 28px;">
+        <p style="font-size:10px;font-weight:600;letter-spacing:0.15em;color:var(--rojo);text-transform:uppercase;margin-bottom:10px;">✗ Evitar</p>
+        <p style="font-size:18px;margin-bottom:4px;">Like Mother, Like Dog-hter</p>
+        <p style="font-size:11px;color:var(--gray);">Title case en headlines → no</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO -->
+<section class="logo-section" id="logo">
+  <p class="section-eyebrow">04 · Logo</p>
+  <h2 class="section-title" style="color:var(--cream);">el logo<br><em>y sus variantes.</em></h2>
+
+  <div class="logo-grid">
+    <div class="logo-variant logo-v1">
+      <div class="logo-text-dark">
+        LANA SUBE
+        <span class="mirror">LANA BAJA</span>
+      </div>
+      <p class="logo-variant-label">Sobre crema — uso principal</p>
+    </div>
+    <div class="logo-variant logo-v2">
+      <div class="logo-text-light">
+        LANA SUBE
+        <span class="mirror">LANA BAJA</span>
+      </div>
+      <p class="logo-variant-label">Sobre negro — emails, footer</p>
+    </div>
+    <div class="logo-variant logo-v3">
+      <div class="logo-text-rosa">
+        LANA SUBE
+        <span class="mirror">LANA BAJA</span>
+      </div>
+      <p class="logo-variant-label">Sobre rosa — secciones hero</p>
+    </div>
+  </div>
+
+  <div style="margin-top:32px;background:#111;padding:24px 32px;">
+    <p style="font-size:10px;font-weight:600;letter-spacing:0.2em;color:#444;text-transform:uppercase;margin-bottom:16px;">Especificaciones</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+      <div><p style="font-size:11px;color:#444;margin-bottom:4px;">Fuente</p><p style="font-size:12px;color:var(--cream);">Poppins SemiBold 600</p></div>
+      <div><p style="font-size:11px;color:#444;margin-bottom:4px;">Letter-spacing</p><p style="font-size:12px;color:var(--cream);">0.18em</p></div>
+      <div><p style="font-size:11px;color:#444;margin-bottom:4px;">Tamaño mínimo</p><p style="font-size:12px;color:var(--cream);">100px de ancho</p></div>
+      <div><p style="font-size:11px;color:#444;margin-bottom:4px;">Estilo</p><p style="font-size:12px;color:var(--cream);">ALL CAPS siempre</p></div>
+    </div>
+  </div>
+
+  <div class="logo-dont">
+    <p class="logo-dont-title">No hacer con el logo</p>
+    <ul class="logo-dont-list">
+      <li>Cambiar la tipografía</li>
+      <li>Usar en colores no autorizados</li>
+      <li>Rotar o distorsionar</li>
+      <li>Agregar efectos o sombras</li>
+      <li>Usar sobre fondos recargados</li>
+      <li>Reducir por debajo de 100px</li>
+      <li>Separar "LANA SUBE" de "LANA BAJA"</li>
+      <li>Usar en minúsculas</li>
+    </ul>
+  </div>
+</section>
+
+<!-- TOV -->
+<section class="tov" id="tov">
+  <p class="section-eyebrow">05 · Tone of Voice</p>
+  <h2 class="section-title">cómo<br><em>sonamos.</em></h2>
+
+  <div class="tov-pillars">
+    <div class="tov-pillar">
+      <p class="tov-pillar-title">la amiga con gusto</p>
+      <p class="tov-pillar-desc">No la marca corporativa. La amiga que te recomienda algo bueno y te lo dice como si fuera secreto. Cercana sin ser informala.</p>
+    </div>
+    <div class="tov-pillar">
+      <p class="tov-pillar-title">divertida con criterio</p>
+      <p class="tov-pillar-desc">Hacemos chistes pero no somos chistosas. El humor viene de la observación. El wink está en el copy, no en el emoji.</p>
+    </div>
+    <div class="tov-pillar">
+      <p class="tov-pillar-title">premium sin pretensión</p>
+      <p class="tov-pillar-desc">Bien hecho, bien pensado. Nunca distante ni elitista. Premium se siente, no se anuncia. Jamás "exclusivo" ni "lujoso".</p>
+    </div>
+    <div class="tov-pillar">
+      <p class="tov-pillar-title">slow & con intención</p>
+      <p class="tov-pillar-desc">Pocas palabras, bien escogidas. No empujamos, mostramos. Si lo puedes decir en 5 palabras, no uses 12.</p>
+    </div>
+  </div>
+
+  <div class="vocab-grid">
+    <div class="vocab-card vocab-yes">
+      <p class="vocab-title">Decimos ✓</p>
+      <div class="vocab-list">
+        <span>perritos</span><span>perritas</span><span>dogs</span><span>dog-hter</span>
+        <span>dog mom</span><span>dog mama</span><span>pup</span><span>puppy</span>
+        <span>fur baby</span><span>perrijo</span><span>pack</span><span>slow-made</span>
+        <span>small batch</span><span>made with intention</span><span>capsule</span>
+        <span>drop</span><span>scrunchie bandana</span><span>co-founder</span>
+      </div>
+    </div>
+    <div class="vocab-card vocab-no">
+      <p class="vocab-title">No decimos ✗</p>
+      <div class="vocab-list">
+        <span>perra</span><span>perro (formal)</span><span>dueño/a</span><span>mascota</span>
+        <span>accesorio para mascotas</span><span>canino</span><span>cliente</span>
+        <span>usuario</span><span>mejores precios</span><span>compra ya</span>
+        <span>no te lo pierdas</span><span>aprovecha</span><span>oferta</span>
+        <span>¡¡¡</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COPY EXAMPLES -->
+<section class="copy-examples">
+  <p class="section-eyebrow">06 · Copy en Acción</p>
+  <h2 class="section-title">bien hecho<br><em>vs. mal hecho.</em></h2>
+
+  <div class="example-pair">
+    <p class="example-label">Anunciar un lanzamiento</p>
+    <div class="example-bad"><span class="ex-icon ex-bad">✗</span><span>"¡Estamos muy emocionados de lanzar nuestra primera colección! ¡No te la pierdas!"</span></div>
+    <div class="example-good"><span class="ex-icon ex-good">✓</span><span>"capsule 01 está aquí. for the dog moms — y para sus dog-hters."</span></div>
+  </div>
+
+  <div class="example-pair">
+    <p class="example-label">Describir un producto</p>
+    <div class="example-bad"><span class="ex-icon ex-bad">✗</span><span>"Bandana fashion para tu perra. ¡Ideal para fotos!"</span></div>
+    <div class="example-good"><span class="ex-icon ex-good">✓</span><span>"Scrunchie bandana en rosa rayada. Slow-made en Cali. La que tu pup va a querer en cada paseo."</span></div>
+  </div>
+
+  <div class="example-pair">
+    <p class="example-label">Newsletter signup</p>
+    <div class="example-bad"><span class="ex-icon ex-bad">✗</span><span>"Suscríbete a nuestro boletín y recibe ofertas exclusivas."</span></div>
+    <div class="example-good"><span class="ex-icon ex-good">✓</span><span>"join the pack. pre-launches, restocks y dog content. cero spam."</span></div>
+  </div>
+
+  <div class="example-pair">
+    <p class="example-label">Hablar de la calidad</p>
+    <div class="example-bad"><span class="ex-icon ex-bad">✗</span><span>"Nuestras bandanas son cómodas y bonitas para tu mascota."</span></div>
+    <div class="example-good"><span class="ex-icon ex-good">✓</span><span>"Las scrunchie bandanas se ponen en segundos — sin nudos, sin broches, sin dramas. Solo desliza sobre la cabeza de tu pup y listo."</span></div>
+  </div>
+
+  <div class="example-pair">
+    <p class="example-label">Hablar del amor por el pup (sin ser cringe)</p>
+    <div class="example-bad"><span class="ex-icon ex-bad">✗</span><span>"Amo a mi perrita con todo mi corazón, ella es mi vida entera."</span></div>
+    <div class="example-good"><span class="ex-icon ex-good">✓</span><span>"cuando lana llegó a mi vida, no encontraba bandanas que me gustaran tanto como mi propia ropa. así que las hice."</span></div>
+  </div>
+</section>
+
+<!-- FRASES CLAVE -->
+<section class="phrases" id="frases">
+  <p class="section-eyebrow">07 · Frases Clave</p>
+  <h2 class="section-title" style="color:var(--cream);">el ADN<br><em>verbal.</em></h2>
+  <ul class="phrase-list">
+    <li class="phrase-item">
+      <span class="phrase-num">01</span>
+      <span class="phrase-text">for dog lovers only</span>
+      <span class="phrase-note">Tagline principal. Siempre en lowercase.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="phrase-num">02</span>
+      <span class="phrase-text">slow making things i actually want to own</span>
+      <span class="phrase-note">Filosofía de producto. Para About y copy editorial.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="phrase-num">03</span>
+      <span class="phrase-text">made with intention</span>
+      <span class="phrase-note">Proceso. Para product copy y storytelling.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="phrase-num">04</span>
+      <span class="phrase-text">like mother, like dog-hter</span>
+      <span class="phrase-note">El wordplay core de la marca. El que lo dice todo.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="phrase-num">05</span>
+      <span class="phrase-text">join the pack</span>
+      <span class="phrase-note">Newsletter y comunidad. El pun perfecto.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="phrase-num">06</span>
+      <span class="phrase-text">bienvenida al dog mom club</span>
+      <span class="phrase-note">Comunidad. Para emails de bienvenida y about.</span>
+    </li>
+    <li class="phrase-item">
+      <span class="phrase-num">07</span>
+      <span class="phrase-text" style="font-family:'Poppins',sans-serif;font-style:normal;font-size:20px;font-weight:700;letter-spacing:0.1em;">LANA SUBE · LANA BAJA</span>
+      <span class="phrase-note">Cierre de todos los captions. Siempre en CAPS.</span>
+    </li>
+  </ul>
+</section>
+
+<!-- SPANGLISH -->
+<section class="spanglish" id="spanglish">
+  <p class="section-eyebrow" style="color:var(--turquesa-dark);">08 · Spanglish Rules</p>
+  <h2 class="section-title">natural,<br><em>no decorativo.</em></h2>
+  <p style="font-size:15px;color:var(--turquesa-dark);max-width:560px;margin-bottom:8px;">Mezclamos cuando suena mejor mezclado, no porque "queda bonito".</p>
+
+  <div class="spanglish-grid">
+    <div class="spanglish-card">
+      <p class="spanglish-lang">Inglés para —</p>
+      <p class="spanglish-title">conceptos de marca</p>
+      <p class="spanglish-desc">Conceptos de marca, guiños de copy, tags, frases cortas con punch.</p>
+      <div class="spanglish-examples">
+        slow · made with intention<br>
+        for dog lovers only<br>
+        NEW · FOR BOTH<br>
+        drop · capsule
+      </div>
+    </div>
+    <div class="spanglish-card">
+      <p class="spanglish-lang">Español para —</p>
+      <p class="spanglish-title">info útil y emoción</p>
+      <p class="spanglish-desc">Info funcional (envíos, talla, materiales), copy que conecta emocionalmente.</p>
+      <div class="spanglish-examples">
+        envíos a todo colombia<br>
+        tallas XS a L<br>
+        hecho a mano en cali<br>
+        lavar a mano, agua fría
+      </div>
+    </div>
+    <div class="spanglish-card">
+      <p class="spanglish-lang">Mezclado cuando —</p>
+      <p class="spanglish-title">la frase lo pide</p>
+      <p class="spanglish-desc">Cuando una frase suena mejor mezclada. El instinto lo dice.</p>
+      <div class="spanglish-examples">
+        la dog mom que tu mamá merece<br>
+        matching outfits para ti y tu dog-hter<br>
+        slow-made en cali<br>
+        join the dog mom club
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMAT RULES -->
+<section class="format">
+  <p class="section-eyebrow">09 · Reglas de Formato</p>
+  <h2 class="section-title">los detalles<br><em>que importan.</em></h2>
+
+  <div class="format-grid">
+    <div class="format-card">
+      <span class="format-icon">Aa</span>
+      <p class="format-title">Mayúsculas</p>
+      <p class="format-rule">Sentence case casi siempre. <strong>ALL CAPS</strong> solo para LANA SUBE · LANA BAJA, labels (NEW, FOR DOGS) y nav. Nunca Title Case en headlines.</p>
+    </div>
+    <div class="format-card">
+      <span class="format-icon">.,</span>
+      <p class="format-title">Puntuación</p>
+      <p class="format-rule">Punto al final, sí. Comas para respirar. <strong>Guión largo (—)</strong> para énfasis. Punto y coma casi nunca. Cero signos de exclamación.</p>
+    </div>
+    <div class="format-card">
+      <span class="format-icon">🐾</span>
+      <p class="format-title">Emojis</p>
+      <p class="format-rule">Máximo <strong>1–2 por caption</strong> de IG. En sitio web, <strong>cero</strong>. En emails, cero o uno máximo en el asunto.</p>
+    </div>
+    <div class="format-card">
+      <span class="format-icon">—</span>
+      <p class="format-title">Largo del copy</p>
+      <p class="format-rule">Cortito siempre. <strong>Un párrafo de 3 frases</strong> > tres párrafos. Si lo puedes decir en 5 palabras, no uses 12.</p>
+    </div>
+    <div class="format-card">
+      <span class="format-icon">#</span>
+      <p class="format-title">Hashtags</p>
+      <p class="format-rule"><strong>Siempre en el primer comentario</strong>, nunca en el caption. Máximo 10 por post.</p>
+    </div>
+    <div class="format-card">
+      <span class="format-icon">tú</span>
+      <p class="format-title">Tratamiento</p>
+      <p class="format-rule"><strong>Tú</strong> — neutro, Latam universal. Nunca usted. Nunca vos (a menos que sea en contexto muy específico).</p>
+    </div>
+  </div>
+</section>
+
+<!-- SENTIMIENTO -->
+<section class="sentiment">
+  <p class="section-eyebrow">10 · La Regla del Sentimiento</p>
+  <h2 class="section-title" style="color:var(--cream);">show,<br><em>don't tell.</em></h2>
+  <p style="font-size:15px;color:rgba(241,239,232,0.5);max-width:560px;margin-bottom:8px;">Antes de escribir cualquier copy emocional, hazte estas tres preguntas:</p>
+
+  <div class="sentiment-rules">
+    <div class="sentiment-rule">
+      <p class="sentiment-num">01</p>
+      <p class="sentiment-title">¿Comportamiento o sentimiento?</p>
+      <p class="sentiment-desc">Lo primero crea identificación, lo segundo es cringe. "Las que llaman al hotel para preguntar si aceptan perritos" >>> "amo a mi perrita con todo mi corazón".</p>
+    </div>
+    <div class="sentiment-rule">
+      <p class="sentiment-num">02</p>
+      <p class="sentiment-title">¿Se infiere o se anuncia?</p>
+      <p class="sentiment-desc">Si la palabra "amor" o "corazón" aparece en el copy, probablemente está mal. El amor se ve en lo que haces, no en decirlo.</p>
+    </div>
+    <div class="sentiment-rule">
+      <p class="sentiment-num">03</p>
+      <p class="sentiment-title">¿Hay humor cerca?</p>
+      <p class="sentiment-desc">El sentimiento puro puede caer en sap. El sentimiento con humor cerca se sostiene. Por eso "robar comida" va antes de "la razón por la que todo existe".</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOTOGRAFÍA -->
+<section class="photography" id="fotografia">
+  <p class="section-eyebrow">11 · Fotografía</p>
+  <h2 class="section-title" style="color:var(--cream);">el estilo<br><em>visual.</em></h2>
+  <p style="font-size:15px;color:#444;max-width:560px;margin-bottom:8px;">Fondos neutros. Luz natural. Sin filtros. Calm y editorial.</p>
+
+  <div class="photo-types">
+    <div class="photo-type">
+      <p class="photo-type-num">01</p>
+      <p class="photo-type-title">Product shots</p>
+      <p class="photo-type-desc">Fondo blanco o crema. El producto es el protagonista absoluto. Para páginas de producto.</p>
+    </div>
+    <div class="photo-type">
+      <p class="photo-type-num">02</p>
+      <p class="photo-type-title">Lifestyle shots</p>
+      <p class="photo-type-desc">Lana usando las bandanas en contextos reales: parque, casa, paseos. La dog mom puede aparecer — manos, perspectiva.</p>
+    </div>
+    <div class="photo-type">
+      <p class="photo-type-num">03</p>
+      <p class="photo-type-title">Matching shots</p>
+      <p class="photo-type-desc">El momento más icónico: Dani y Lana con el mismo print/color. Estas van en hero y en redes. Son el alma de la marca.</p>
+    </div>
+    <div class="photo-type">
+      <p class="photo-type-num">04</p>
+      <p class="photo-type-title">Detail shots</p>
+      <p class="photo-type-desc">Texturas de tela, costuras, el elástico del scrunchie, el vinilo textil. Muestran calidad sin palabras.</p>
+    </div>
+  </div>
+
+  <div class="photo-donts">
+    <div class="photo-dont-item">Filtros que alteren los colores del producto</div>
+    <div class="photo-dont-item">Fondos recargados o distractores</div>
+    <div class="photo-dont-item">Poses forzadas o artificiales</div>
+    <div class="photo-dont-item">Imágenes de banco (stock photos)</div>
+  </div>
+</section>
+
+<!-- HASHTAGS -->
+<section class="hashtags" id="hashtags">
+  <p class="section-eyebrow">12 · Hashtags</p>
+  <h2 class="section-title">siempre en<br><em>el primer comentario.</em></h2>
+
+  <p style="font-size:10px;font-weight:600;letter-spacing:0.2em;color:var(--gray);text-transform:uppercase;margin-bottom:16px;">Fijos en todos los posts</p>
+  <div class="hashtag-fixed">
+    <span class="hashtag-tag">#lanasubelanabaja</span>
+    <span class="hashtag-tag">#dogmom</span>
+    <span class="hashtag-tag">#dogmomcolombia</span>
+    <span class="hashtag-tag">#perrascolombia</span>
+    <span class="hashtag-tag">#fordogloversonly</span>
+  </div>
+
+  <div class="hashtag-rule">
+    <strong>Regla de oro:</strong> los hashtags van <strong>siempre en el primer comentario</strong>, nunca dentro del caption. El caption respira solo.
+  </div>
+
+  <p style="font-size:10px;font-weight:600;letter-spacing:0.2em;color:var(--gray);text-transform:uppercase;margin:32px 0 16px;">Opcionales por tipo de contenido</p>
+  <div class="hashtag-fixed">
+    <span class="hashtag-tag optional">#dogfashion</span>
+    <span class="hashtag-tag optional">#petaccessories</span>
+    <span class="hashtag-tag optional">#dogsofinstagram</span>
+    <span class="hashtag-tag optional">#dogstyle</span>
+    <span class="hashtag-tag optional">#slowfashion</span>
+    <span class="hashtag-tag optional">#cali</span>
+    <span class="hashtag-tag optional">#colombia</span>
+    <span class="hashtag-tag optional">#dogmomlife</span>
+    <span class="hashtag-tag optional">#bandanaperro</span>
+    <span class="hashtag-tag optional">#accesoriosperros</span>
+    <span class="hashtag-tag optional">#calidogmom</span>
+  </div>
+</section>
+
+<!-- BUTTONS -->
+<section class="buttons" id="botones">
+  <p class="section-eyebrow">13 · Botones & UI</p>
+  <h2 class="section-title" style="color:var(--cream);">componentes<br><em>visuales.</em></h2>
+
+  <p style="font-size:10px;font-weight:600;letter-spacing:0.2em;color:#444;text-transform:uppercase;margin-bottom:20px;">Botones</p>
+  <div class="btn-showcase">
+    <button class="btn-primary">shop the capsule</button>
+    <button class="btn-secondary">leer la historia →</button>
+    <button class="btn-cta">añadir al carrito</button>
+  </div>
+
+  <div class="btn-spec">
+    <div class="btn-spec-item">
+      <p class="btn-spec-label">Primario</p>
+      <p class="btn-spec-detail">
+        bg: <span>#1C1C1C</span><br>
+        color: <span>#F1EFE8</span><br>
+        font: <span>Poppins 600</span><br>
+        size: <span>12px</span><br>
+        tracking: <span>0.12em</span><br>
+        radius: <span>2px</span><br>
+        padding: <span>14px 32px</span>
+      </p>
+    </div>
+    <div class="btn-spec-item">
+      <p class="btn-spec-label">Secundario</p>
+      <p class="btn-spec-detail">
+        bg: <span>transparent</span><br>
+        color: <span>#F1EFE8</span><br>
+        border: <span>1px #F1EFE8</span><br>
+        font: <span>Poppins 500</span><br>
+        size: <span>12px</span><br>
+        tracking: <span>0.12em</span><br>
+        radius: <span>2px</span>
+      </p>
+    </div>
+    <div class="btn-spec-item">
+      <p class="btn-spec-label">CTA / Sale</p>
+      <p class="btn-spec-detail">
+        bg: <span>#C73E2E</span><br>
+        color: <span>#F1EFE8</span><br>
+        font: <span>Poppins 600</span><br>
+        size: <span>12px</span><br>
+        tracking: <span>0.12em</span><br>
+        radius: <span>2px</span><br>
+        uso: <span>add to cart, sale</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CHANNELS -->
+<section class="channels" id="canales">
+  <p class="section-eyebrow">14 · Canales</p>
+  <h2 class="section-title">dónde<br><em>vivimos.</em></h2>
+
+  <div class="channel-grid">
+    <div class="channel-card">
+      <p class="channel-icon">📱</p>
+      <p class="channel-name">Instagram</p>
+      <ul class="channel-rules">
+        <li>Handle: @lanasubelanabaja.co</li>
+        <li>Grid estético, coherente con paleta</li>
+        <li>Stories: casual, BTS, Lana content</li>
+        <li>Reels: matching moments, proceso</li>
+        <li>Captions: TOV completo</li>
+        <li>Cierre: LANA SUBE · LANA BAJA</li>
+        <li>Hashtags en primer comentario</li>
+        <li>Máximo 1–2 emojis por post</li>
+      </ul>
+    </div>
+    <div class="channel-card">
+      <p class="channel-icon">🛍️</p>
+      <p class="channel-name">Website</p>
+      <ul class="channel-rules">
+        <li>lanasubelanabaja.co</li>
+        <li>Shopify · tema Atelier</li>
+        <li>Idiomas: ES / EN</li>
+        <li>Sin emojis en ningún copy</li>
+        <li>Newsletter: join the dog mom club</li>
+        <li>Fondo: #F1EFE8 siempre</li>
+        <li>Fuentes: Fraunces + Poppins</li>
+      </ul>
+    </div>
+    <div class="channel-card">
+      <p class="channel-icon">✉️</p>
+      <p class="channel-name">Email Marketing</p>
+      <ul class="channel-rules">
+        <li>hello@lanasubelanabaja.co</li>
+        <li>Header y footer con logo LSLB</li>
+        <li>Fuente body: Poppins</li>
+        <li>Mismo TOV, más íntimo</li>
+        <li>Máximo 1 emoji en asunto</li>
+        <li>Fondo: #F1EFE8</li>
+      </ul>
+    </div>
+    <div class="channel-card">
+      <p class="channel-icon">📦</p>
+      <p class="channel-name">Empaque & Unboxing</p>
+      <ul class="channel-rules">
+        <li>Tissue paper en Rosa #F5E1E8 o Crema</li>
+        <li>Sticker LSLB o nota escrita a mano</li>
+        <li>Experiencia de regalo, no de paquete</li>
+        <li>El unboxing empieza desde el email</li>
+      </ul>
+    </div>
+    <div class="channel-card">
+      <p class="channel-icon">💬</p>
+      <p class="channel-name">DMs / WhatsApp</p>
+      <ul class="channel-rules">
+        <li>Canal principal de ventas por ahora</li>
+        <li>Mismo tono: cercano pero premium</li>
+        <li>Respuestas rápidas guardadas en IG</li>
+        <li>Máximo 1 emoji por mensaje</li>
+        <li>Cierre: LANA SUBE · LANA BAJA</li>
+      </ul>
+    </div>
+    <div class="channel-card" style="background:var(--rosa);border-color:var(--rosa);">
+      <p class="channel-icon">🐾</p>
+      <p class="channel-name">Dog Mom Club</p>
+      <ul class="channel-rules">
+        <li>El newsletter es la entrada al club</li>
+        <li>"join the pack" no "suscríbete"</li>
+        <li>Pre-launches solo para miembras</li>
+        <li>Cero spam, prometido</li>
+        <li>Bienvenida: "ya eres una de nosotras"</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p class="footer-logo">LANA SUBE</p>
+  <span class="footer-mirror">LANA BAJA</span>
+  <p class="footer-tagline">for dog lovers only.</p>
+  <p class="footer-meta">Brand Guidelines · v1 · 2026 · Made in Cali, Colombia</p>
+</footer>
+
+<!-- Clipboard toast -->
+<div class="copied" id="toast">Color copiado ✓</div>
+
+<script>
+function copyColor(hex) {
+  navigator.clipboard.writeText(hex).then(() => {
+    const toast = document.getElementById('toast');
+    toast.textContent = hex + ' copiado ✓';
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2000);
+  });
+}
+</script>
+
+</body>
+</html>
